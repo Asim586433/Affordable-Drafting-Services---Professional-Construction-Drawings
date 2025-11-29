@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affordable Drafting Services | Professional Construction Drawings</title>
+    <meta name="description" content="Professional residential construction drawings for remodels, additions, and new construction. Over two decades of experience delivering quality plans.">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        :root {
+            --primary: #1a3a5f;
+            --secondary: #d4af37;
+            --accent: #2c5aa0;
+            --light: #f8f9fa;
+            --dark: #333;
+            --gray: #6c757d;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fff;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+        
+        .contact-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-btn:hover {
+            background-color: var(--accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f0f0"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23e0e0e0" stroke-width="1"/></svg>');
+            background-size: cover;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: var(--gray);
+            margin-top: 15px;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        .feature-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .feature-link::after {
+            content: ' >';
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .section-title .subtitle {
+            color: var(--gray);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .portfolio-item {
+            height: 250px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .portfolio-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+            z-index: 1;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-btn:hover {
+            background-color: #e6c12e;
+        }
+        
+        /* About Page */
+        .about-hero {
+            padding: 150px 0 80px;
+            background-color: var(--light);
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-section {
+            margin-bottom: 50px;
+        }
+        
+        .about-section h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .about-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #ccc;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .features-grid, .portfolio-grid, .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .features-grid, .portfolio-grid, .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">ADS<span>Plans</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="contact-btn">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Successful Residential Construction Depends Upon Brilliant Drawings.</h1>
+                <div class="subtitle">WE'VE DELIVERED MORE FOR LESS FOR OVER TWO DECADES.</div>
+                <p>Plans Bringing Construction Dreams To Life.</p>
+                <p>Remodels to additions to new construction and more, we know all the stories of what can go wrong. Technology, deep experience and a proprietary process proactively anticipates and avoids problems to deliver better outcomes. Drawings enabling contractors to do their best work with fewer permitting delays and surprises. Thousands of projects attest to the success of our method This is how ADS gets it right the first time to give homeowners more value with less stress.</p>
+                <p class="tagline">By Blending Innovation With Best Practices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Our Story</h3>
+                    <p>The origin of superior architectural drawings.</p>
+                    <a href="#about" class="feature-link">Learn More</a>
+                </div>
+                <div class="feature-card">
+                    <h3>Our Process</h3>
+                    <p>Designed for efficiency and peace of mind.</p>
+                    <a href="#process" class="feature-link">Learn More</a>
+                </div>
+                <div class="feature-card">
+                    <h3>Our Portfolio</h3>
+                    <p>Beautiful results that add enduring value.</p>
+                    <a href="#portfolio" class="feature-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Beautiful Results in Projects of All Sizes.</h2>
+                <div class="subtitle">A SAMPLING OF THOUSAND OF SUCCESSFUL ADS PROJECTS</div>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23e0e0e0'/><text x='50%' y='50%' font-family='Arial' font-size='18' text-anchor='middle' fill='%23999'>Project Image 1</text></svg>" alt="ADS Project 1">
+                </div>
+                <div class="portfolio-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23e0e0e0'/><text x='50%' y='50%' font-family='Arial' font-size='18' text-anchor='middle' fill='%23999'>Project Image 2</text></svg>" alt="ADS Project 2">
+                </div>
+                <div class="portfolio-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23e0e0e0'/><text x='50%' y='50%' font-family='Arial' font-size='18' text-anchor='middle' fill='%23999'>Project Image 3</text></svg>" alt="ADS Project 3">
+                </div>
+                <div class="portfolio-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23e0e0e0'/><text x='50%' y='50%' font-family='Arial' font-size='18' text-anchor='middle' fill='%23999'>Project Image 4</text></svg>" alt="ADS Project 4">
+                </div>
+                <div class="portfolio-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23e0e0e0'/><text x='50%' y='50%' font-family='Arial' font-size='18' text-anchor='middle' fill='%23999'>Project Image 5</text></svg>" alt="ADS Project 5">
+                </div>
+                <div class="portfolio-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23e0e0e0'/><text x='50%' y='50%' font-family='Arial' font-size='18' text-anchor='middle' fill='%23999'>Project Image 6</text></svg>" alt="ADS Project 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>YOUR DREAMS, OUR PLANS.</h2>
+            <p>Get the Conversation Started!</p>
+            <a href="#contact-form" class="cta-btn">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-hero" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="section-title">
+                    <h2>ADS Plans Give Builders an Advantage and Homeowners Peace-of-Mind.</h2>
+                    <div class="subtitle">THANKS TO DEEP EXPERIENCE AND A TEAM OF EXPERTS</div>
+                </div>
+                
+                <div class="about-section">
+                    <p>Over two decades ago, Founder-CEO Tony Bragano had a vision: ADS would deliver high-value drafting solutions at an affordable price. Growing up in his father's construction business gave him a holistic understanding of processes and permitting. How to do it right, what can wrong, and how the right drawings are the key to ensuring the happy ending homeowners and builders deserve.</p>
+                </div>
+                
+                <div class="about-section">
+                    <h2>Superior Plans Delivering Superior Homeowner Outcomes.</h2>
+                    <p>Modern drafting does so much more than serve as a blueprint. They are rich in data that capture the vision of the project and help guide the complex construction process and keep it efficient and on track.</p>
+                </div>
+                
+                <div class="about-section">
+                    <h2>We Use Latest Technology With a Customer-First Mindset.</h2>
+                    <p>Technological innovation offers exciting new and empowering tools. Their advantages are best leveraged with an attitude faithful to our core values and put highest quality and customer satisfaction first.</p>
+                </div>
+                
+                <div class="about-section">
+                    <h2>A Team Dedicated to Innovation and Architectural Beauty.</h2>
+                    <p>Our experienced, highly skilled team brings actionable insight to every project. ADS drafting solutions combine bold innovation with artistic architectural elegance to deliver homeowners the very best results.</p>
+                </div>
+                
+                <div class="about-section">
+                    <h2>Highest Quality Drawings Are Affordable and Within Reach.</h2>
+                    <p>New technologies combine efficiencies with artistic creativity and an irreplaceable, old school human touch. At ADS every job is a priority. We promise highest quality drawings that are affordable, not cheap.</p>
+                </div>
+                
+                <div class="cta" style="background-color: transparent; color: var(--dark); padding: 40px 0 0;">
+                    <h2>YOUR DREAMS, OUR PLANS.</h2>
+                    <p>Get the Conversation Started!</p>
+                    <a href="#contact-form" class="cta-btn">Contact Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ADS Plans</h3>
+                    <p>Professional residential construction drawings for over two decades. Delivering quality, affordable plans for remodels, additions, and new construction.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#process">Our Process</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#resources">Resources</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@adsplans.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Address: 123 Construction Ave, Building City</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Affordable Drafting Services. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Simple form validation for contact form (if added later)
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if(name === '' || email === '' || message === '') {
+                alert('Please fill in all fields');
+                return false;
+            }
+            
+            if(!validateEmail(email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+            
+            return true;
+        }
+        
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+        
+        // Add active class to current navigation item
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
